@@ -78,16 +78,16 @@ Install create-course in this project. Clone https://github.com/eugeniawang/crea
 Or run this from the project root:
 
 ```bash
-git clone --depth 1 https://github.com/eugeniawang/create-course.git .cf-tmp
+git clone --depth 1 https://github.com/eugeniawang/create-course.git .cc-tmp
 mkdir -p .claude/skills
-cp -r .cf-tmp/course-builder .claude/skills/course-builder
-rm -rf .cf-tmp
+cp -r .cc-tmp/course-builder .claude/skills/course-builder
+rm -rf .cc-tmp
 ```
 
 For Codex, open your project and paste:
 
 ```text
-Install create-course in this project. Clone https://github.com/eugeniawang/create-course, copy its course-builder/ folder into .courseforge/course-builder/, then add a short AGENTS.md note that says: "When I ask you to build a course, follow .courseforge/course-builder/SKILL.md." Tell me when that is in place.
+Install create-course in this project. Clone https://github.com/eugeniawang/create-course, copy its course-builder/ folder into .create-course/course-builder/, then add a short AGENTS.md note that says: "When I ask you to build a course, follow .create-course/course-builder/SKILL.md." Tell me when that is in place.
 ```
 
 For Claude Cowork, open the project and paste:
