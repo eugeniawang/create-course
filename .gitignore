@@ -1,0 +1,22 @@
+.DS_Store
+_bmad
+.env
+.env.*
+!.env.example
+
+# Local install scratch folders from README/docs examples.
+.cf-tmp/
+.cb-tmp/
+
+# Common local/runtime output.
+node_modules/
+.next/
+dist/
+build/
+
+# Do not accidentally publish private source packs or credentials from generated courses.
+**/materials/private/
+**/materials/sources/private/
+**/secrets/
+**/*token*
+**/*secret*

@@ -1,0 +1,61 @@
+{
+  "course": "{{COURSE_TITLE}}",
+  "version": 3,
+  "current_session": 1,
+  "navigation": {
+    "mode": "sequential",
+    "recommended_mode": "sequential",
+    "allow_jump_ahead": true,
+    "jump_history": []
+  },
+  "_comment": "Generate one entry per session, matching LESSONS.md exactly. status: not_started | in_progress | completed",
+  "course_meta": {
+    "build_mode": "{{greenfield | brownfield}}",
+    "intake_template": "{{source-led | goal-led | topic-led}}",
+    "original_course_path": "{{required for brownfield, else none; read-only}}",
+    "reconstruction_copy_path": "{{path inside this self-contained course folder, required for brownfield}}",
+    "original_course_mutation_policy": "never edit the original course in place",
+    "goal_type": "{{specific outcome | general learning | both}}",
+    "course_goals": [],
+    "success_criteria": [],
+    "out_of_scope": [],
+    "delivery_environment": "{{claude-code | claude-cowork | codex | multiple}}",
+    "source_boundary": "{{what SOURCE.md covers and what it does not}}",
+    "capstone": "{{final learner artifact or readiness proof}}"
+  },
+  "review_queue": [],
+  "parking_lot": [],
+  "competency_progress": {},
+  "time_tracking": {
+    "enabled": true,
+    "mode": "active_learning_time",
+    "total_active_minutes": 0,
+    "current_timer": {
+      "running": false,
+      "session_id": null,
+      "started_at": null,
+      "paused_at": null
+    },
+    "log": []
+  },
+  "sessions": [
+    {
+      "id": 1,
+      "title": "{{SESSION_1_TITLE}}",
+      "phase": "{{PHASE_1_NAME}}",
+      "status": "not_started",
+      "checkpoints": [],
+      "check_result": null,
+      "active_minutes": 0,
+      "started_at": null,
+      "completed_at": null,
+      "time_log": [],
+      "weak_concepts": [],
+      "misconceptions": [],
+      "retry_status": "not_needed",
+      "recommended_next_action": "start_session",
+      "source_anchors": [],
+      "notes": ""
+    }
+  ]
+}

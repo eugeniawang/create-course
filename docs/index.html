@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';" />
+  <title>create-course - course builder</title>
+  <meta name="description" content="create-course helps you build interactive, goal-driven courses for Claude Code, Codex, or Claude Cowork." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    pre, code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </style>
+</head>
+<body class="bg-[#f7f1e8] text-[#2f241c]">
+  <header class="sticky top-0 z-40 border-b border-[#d8c7b3] bg-[#fbf6ee]/90 backdrop-blur">
+    <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-5">
+      <a href="#" class="flex items-center gap-3">
+        <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-[#8a4f2b] text-sm font-black text-white">CF</div>
+        <div>
+          <div class="font-semibold leading-tight text-[#2f1f16]">create-course</div>
+          <div class="hidden text-xs text-[#7b6a5c] sm:block">course builder</div>
+        </div>
+      </a>
+      <nav class="hidden items-center gap-5 text-sm md:flex">
+        <a class="text-[#66584b] hover:text-[#8a4f2b]" href="#install">Install</a>
+        <a class="text-[#66584b] hover:text-[#8a4f2b]" href="#use">Use</a>
+        <a class="text-[#66584b] hover:text-[#8a4f2b]" href="#output">Output</a>
+        <a class="font-medium text-[#8a4f2b] hover:text-[#5a321b]" href="https://github.com/eugeniawang/create-course">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="border-b border-[#d8c7b3] bg-[#fbf6ee]">
+      <div class="mx-auto grid max-w-6xl gap-8 px-5 py-14 lg:grid-cols-[1.15fr_0.85fr] lg:py-20">
+        <div>
+          <div class="mb-4 inline-flex rounded-full border border-[#d7b995] bg-[#efe1cf] px-3 py-1 text-xs font-semibold text-[#8a4f2b]">Claude Code · Codex · Claude Cowork</div>
+          <h1 class="max-w-3xl text-4xl font-bold tracking-tight text-[#2f1f16] sm:text-5xl">create-course</h1>
+          <p class="mt-4 max-w-2xl text-xl leading-8 text-[#4b392c]">Build interactive, goal-driven courses delivered in Claude Code, Codex, or Claude Cowork.</p>
+          <p class="mt-5 max-w-2xl text-[#66584b]">create-course helps you make a self-contained course folder from a topic, source packet, goal, or existing course. The finished course can be opened in Claude Code, Codex, or Claude Cowork. Those are delivery environments, not the subject of the course.</p>
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a href="#install" class="rounded-lg bg-[#8a4f2b] px-5 py-3 text-sm font-semibold text-white hover:bg-[#5a321b]">Install create-course</a>
+            <a href="https://github.com/eugeniawang/create-course" class="rounded-lg border border-[#d7b995] bg-white px-5 py-3 text-sm font-semibold text-[#2f241c] hover:border-[#8a4f2b]">View repo</a>
+          </div>
+        </div>
+        <div class="rounded-xl border border-[#d8c7b3] bg-[#2f1f16] p-5 text-sm text-[#fbf6ee] shadow-sm">
+          <div class="mb-3 text-xs font-semibold uppercase tracking-wide text-[#cdb8a2]">Generated course folder</div>
+<pre class="overflow-x-auto leading-6"><code>my-course/
+├── README.md
+├── CLAUDE.md / AGENTS.md / COWORK.md
+├── LESSONS.md
+├── SOURCE.md
+├── COURSE_PLAN.md
+├── PROGRESS.md
+├── progress.json
+├── index.html
+└── templates/</code></pre>
+          <p class="mt-4 text-[#cdb8a2]">Open the folder in your chosen delivery environment and say <span class="font-semibold text-white">"Let's get started"</span>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="what" class="mx-auto max-w-6xl px-5 py-12">
+      <div class="grid gap-4 md:grid-cols-3">
+        <div class="rounded-lg border border-[#d8c7b3] bg-white p-5">
+          <h2 class="font-semibold text-[#2f1f16]">For focused learning</h2>
+          <p class="mt-2 text-sm leading-6 text-[#66584b]">Start with a goal, exam, work task, source packet, or general topic. create-course helps narrow it into a course with clear outcomes.</p>
+        </div>
+        <div class="rounded-lg border border-[#d8c7b3] bg-white p-5">
+          <h2 class="font-semibold text-[#2f1f16]">For new or existing courses</h2>
+          <p class="mt-2 text-sm leading-6 text-[#66584b]">Build from scratch or rework an existing course. Existing courses are copied first; originals stay read-only.</p>
+        </div>
+        <div class="rounded-lg border border-[#d8c7b3] bg-white p-5">
+          <h2 class="font-semibold text-[#2f1f16]">For delivery environment choice</h2>
+          <p class="mt-2 text-sm leading-6 text-[#66584b]">Choose whether the learner will open the finished course in Claude Code, Codex, or Claude Cowork.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="install" class="border-y border-[#d8c7b3] bg-white">
+      <div class="mx-auto max-w-6xl px-5 py-12">
+        <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <h2 class="text-2xl font-bold text-[#2f1f16]">Install</h2>
+            <p class="mt-3 text-[#66584b]">create-course is not an npm package yet. For now, install it by copying the <code>course-builder/</code> folder into the project where you want to create a course.</p>
+          </div>
+          <div class="space-y-4">
+            <div class="rounded-lg border border-[#d8c7b3] bg-[#f7f1e8] p-4">
+              <div class="mb-2 text-sm font-semibold text-[#2f1f16]">Claude Code</div>
+              <p class="mb-3 text-sm leading-6 text-[#66584b]">Open your project in Claude Code and paste this:</p>
+<pre class="whitespace-pre-wrap break-words rounded-md bg-white p-4 text-sm leading-6 text-[#2f241c]"><code>Install create-course in this project. Clone https://github.com/eugeniawang/create-course, copy its course-builder/ folder into .claude/skills/course-builder/, then delete the clone. Tell me when SKILL.md is in place.</code></pre>
+              <details class="mt-3">
+                <summary class="cursor-pointer text-sm font-semibold text-[#8a4f2b]">Prefer terminal?</summary>
+<pre class="overflow-x-auto rounded-md bg-[#2f1f16] p-4 text-sm leading-6 text-[#fbf6ee]"><code>git clone --depth 1 https://github.com/eugeniawang/create-course.git .cf-tmp
+mkdir -p .claude/skills
+cp -r .cf-tmp/course-builder .claude/skills/course-builder
+rm -rf .cf-tmp</code></pre>
+              </details>
+            </div>
+
+            <div class="rounded-lg border border-[#d8c7b3] bg-white p-4">
+              <div class="mb-2 text-sm font-semibold text-[#2f1f16]">Codex</div>
+              <p class="mb-3 text-sm leading-6 text-[#66584b]">Open your project in Codex and paste this:</p>
+<pre class="whitespace-pre-wrap break-words rounded-md bg-[#f7f1e8] p-4 text-sm leading-6 text-[#2f241c]"><code>Install create-course in this project. Clone https://github.com/eugeniawang/create-course, copy its course-builder/ folder into .courseforge/course-builder/, then add a short AGENTS.md note that says: "When I ask you to build a course, follow .courseforge/course-builder/SKILL.md." Tell me when that is in place.</code></pre>
+              <p class="mt-3 text-sm leading-6 text-[#66584b]">Codex uses <code>AGENTS.md</code> as the project instruction file, so this makes the builder available without pretending it is an npm package.</p>
+            </div>
+
+            <div class="rounded-lg border border-[#d8c7b3] bg-white p-4">
+              <div class="mb-2 text-sm font-semibold text-[#2f1f16]">Claude Cowork</div>
+              <p class="mb-3 text-sm leading-6 text-[#66584b]">Open the project in Claude Cowork and paste this:</p>
+<pre class="whitespace-pre-wrap break-words rounded-md bg-[#f7f1e8] p-4 text-sm leading-6 text-[#2f241c]"><code>Install create-course in this project. Clone https://github.com/eugeniawang/create-course, copy its course-builder/ folder into a project-local create-course folder, then add a project instruction telling Claude Cowork to follow course-builder/SKILL.md when I ask it to build a course. Tell me where you put SKILL.md.</code></pre>
+              <p class="mt-3 text-sm leading-6 text-[#66584b]">Claude Cowork setup depends on how the project stores its instructions, so the important part is that <code>course-builder/SKILL.md</code> is copied into the project and referenced from the project instructions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="use" class="mx-auto max-w-6xl px-5 py-12">
+      <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <h2 class="text-2xl font-bold text-[#2f1f16]">Use</h2>
+          <p class="mt-3 text-[#66584b]">Ask create-course to build a course. It will guide the intake, propose a focused plan, then generate the course folder.</p>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2">
+          <div class="rounded-lg border border-[#d8c7b3] bg-white p-5">
+            <h3 class="font-semibold text-[#2f1f16]">Goal-led</h3>
+            <p class="mt-2 text-sm text-[#66584b]">"Build a course to help me pass the Anthropic exam."</p>
+          </div>
+          <div class="rounded-lg border border-[#d8c7b3] bg-white p-5">
+            <h3 class="font-semibold text-[#2f1f16]">Source-led</h3>
+            <p class="mt-2 text-sm text-[#66584b]">"Build a course from these docs and NotebookLM materials."</p>
+          </div>
+          <div class="rounded-lg border border-[#d8c7b3] bg-white p-5">
+            <h3 class="font-semibold text-[#2f1f16]">Topic-led</h3>
+            <p class="mt-2 text-sm text-[#66584b]">"Build a beginner course on prompt engineering for ops work."</p>
+          </div>
+          <div class="rounded-lg border border-[#d8c7b3] bg-white p-5">
+            <h3 class="font-semibold text-[#2f1f16]">Existing course</h3>
+            <p class="mt-2 text-sm text-[#66584b]">"Rework this existing course into a focused create-course course."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="output" class="border-y border-[#d8c7b3] bg-white">
+      <div class="mx-auto max-w-6xl px-5 py-12">
+        <h2 class="text-2xl font-bold text-[#2f1f16]">What the generated course includes</h2>
+        <div class="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-lg border border-[#d8c7b3] p-5"><h3 class="font-semibold">Delivery environment</h3><p class="mt-2 text-sm text-[#66584b]">Course instructions for Claude Code, Codex, or Claude Cowork.</p></div>
+          <div class="rounded-lg border border-[#d8c7b3] p-5"><h3 class="font-semibold">Feynman explain-back</h3><p class="mt-2 text-sm text-[#66584b]">Learners explain concepts in simple language; the course repairs gaps before moving on.</p></div>
+          <div class="rounded-lg border border-[#d8c7b3] p-5"><h3 class="font-semibold">Full lessons</h3><p class="mt-2 text-sm text-[#66584b]">Overview, skill focus, practice, explain-back, scenario checks, recap, transfer task.</p></div>
+          <div class="rounded-lg border border-[#d8c7b3] p-5"><h3 class="font-semibold">Progress and time</h3><p class="mt-2 text-sm text-[#66584b]">Completion, weak areas, retries, next action, and active learning time.</p></div>
+          <div class="rounded-lg border border-[#d8c7b3] p-5"><h3 class="font-semibold">Source notes</h3><p class="mt-2 text-sm text-[#66584b]">Source notes, domain maps, validation notes, and coverage artifacts when needed.</p></div>
+          <div class="rounded-lg border border-[#d8c7b3] p-5"><h3 class="font-semibold">Scenario checks</h3><p class="mt-2 text-sm text-[#66584b]">Checks favor judgment and application over recall-only questions.</p></div>
+          <div class="rounded-lg border border-[#d8c7b3] p-5"><h3 class="font-semibold">Sequential or flexible</h3><p class="mt-2 text-sm text-[#66584b]">Sequential is recommended, but learners can jump around with prerequisite warnings.</p></div>
+          <div class="rounded-lg border border-[#d8c7b3] p-5"><h3 class="font-semibold">Review loops</h3><p class="mt-2 text-sm text-[#66584b]">Explain again, guided retry, spaced review, and targeted retry paths.</p></div>
+          <div class="rounded-lg border border-[#d8c7b3] p-5"><h3 class="font-semibold">Existing-course rebuilds</h3><p class="mt-2 text-sm text-[#66584b]">Existing courses are copied into a reconstruction workspace; originals stay read-only.</p></div>
+          <div class="rounded-lg border border-[#d8c7b3] p-5"><h3 class="font-semibold">Course landing page</h3><p class="mt-2 text-sm text-[#66584b]">A simple <code>index.html</code> explaining the generated course and how to start.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-[#d8c7b3] bg-white">
+      <div class="mx-auto max-w-6xl px-5 py-12">
+        <h2 class="text-2xl font-bold text-[#2f1f16]">Attribution</h2>
+        <p class="mt-3 max-w-3xl text-sm leading-6 text-[#66584b]">create-course is hosted at <a class="text-[#8a4f2b] hover:underline" href="https://github.com/eugeniawang/create-course">eugeniawang/create-course</a>. It is a fork of John Brophy's <a class="text-[#8a4f2b] hover:underline" href="https://github.com/johnbr0phy/course-builder">johnbr0phy/course-builder</a>, with additional inspiration from <a class="text-[#8a4f2b] hover:underline" href="https://github.com/abiodedeyi/cca-f-exam-prep/tree/master/reference">Abiodedeyi's CCA-F reference repo</a>, <a class="text-[#8a4f2b] hover:underline" href="https://github.com/carlvellotti/claude-code-pm-course">Carl Vellotti's Claude Code PM course</a>, <a class="text-[#8a4f2b] hover:underline" href="https://github.com/mattpocock/skills">Matt Pocock's grill-me skill</a>, structured planning practices, and optional NotebookLM workflows.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-[#d8c7b3] py-8">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-5 text-sm text-[#7b6a5c] sm:flex-row sm:items-center sm:justify-between">
+      <span>create-course - interactive, goal-driven course builder.</span>
+      <a class="hover:text-[#8a4f2b]" href="https://github.com/eugeniawang/create-course">github.com/eugeniawang/create-course</a>
+    </div>
+  </footer>
+</body>
+</html>
